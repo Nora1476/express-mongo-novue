@@ -26,9 +26,9 @@ var server = http.createServer(app);
  */
 
 server.listen(port, function(){
-  console.log(`http://localhost:${app.get('port')} 에서 대기 중`);// 추가한 코드
+  console.log(`http://localhost:${app.get('port')} 에서 대기 중`);
 });
-server.on('error', onError); //아래에 함수있음
+server.on('error', onError);
 server.on('listening', onListening);
 
 /**

@@ -1,4 +1,3 @@
-//index.js라우터의 백단위처리를 하기위한 라우터
 const express = require('express');
 const User = require('../schemas/user');
 const Comment = require('../schemas/comment');
@@ -33,7 +32,7 @@ router.route('/')
 router.get('/:id/comments', async (req, res, next) => {
   try {
     const comments = await Comment.find({ commenter: req.params.id })
-      .populate('commenter'); //populate 하나의 다규먼트가 다른 다큐먼트의 objectID로 사용될 때
+      .populate('commenter');
     console.log(comments);
     res.json(comments);
   } catch (err) {

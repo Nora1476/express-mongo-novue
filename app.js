@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const connect = require('./schemas') //connect와 데이터스키마 설정
+const connect = require('./schemas')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -31,7 +31,6 @@ app.use('/comments', commentsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`)
-  console.log(error);
   next(createError(404));
 });
 
