@@ -1,5 +1,7 @@
+//schemas 데이터를 담기위한 구조 및 설계도 
+//index.js라우터의 백단위처리를 하기위한 라우터
+
 const mongoose = require('mongoose');
-// const User = require('../schemas/user');
 
 const { Schema } = mongoose;
 const { Types: { ObjectId } } = Schema;
